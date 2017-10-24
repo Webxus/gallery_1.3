@@ -11,7 +11,9 @@ function nextSlider() {
 		 i++;
 		 return (i);
 	} else {
-		return i = 0;
+		searchPhoto.src = photos[i];
+		i = 0;
+		return i;
 	}
 };
 
