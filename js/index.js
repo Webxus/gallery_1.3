@@ -1,23 +1,18 @@
 const searchPhoto = document.getElementById('currentPhoto'),
 nextPhoto = document.getElementById('nextPhoto'),
 prevPhoto = document.getElementById('prevPhoto'),
-photos = ['i/IAC.jpg', 'i/breuer-building.jpg', 'i/guggenheim-museum.jpg', 'i/headquarters.jpg', 'i/new-museum.jpg', 'i/spinner.gif'];
+photos = ['i/IAC.jpg', 'i/breuer-building.jpg', 'i/guggenheim-museum.jpg', 'i/headquarters.jpg', 'i/new-museum.jpg'];
 
 let i = 0;
+
 function nextSlider() {
-	if (i < photos.length) {
-		searchPhoto.src = photos[i++];
+	if (i < photos.length - 1) {
+		searchPhoto.src = photos[i];
+		 i++;
+		 return (i);
 	} else {
-		i = 0;
+		return i = 0;
 	}
 };
-nextPhoto.onclick = nextSlider;
 
-function prevSlider() {
-	if (i < photos.length) {
-		searchPhoto.src = photos[i--];
-	} else {
-		i = 0;
-	}
-}
-prevPhoto.onclick = prevSlider;
+nextPhoto.onclick = nextSlider;
