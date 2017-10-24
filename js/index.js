@@ -20,7 +20,7 @@ function nextSlider() {
 nextPhoto.onclick = nextSlider;
 
 function prevSlider() {
-	if (i < 1) {
+	if (i <= 0) {
 		searchPhoto.src = photos[i];
 		 i = (photos.length - 1);
 		 return (i);
