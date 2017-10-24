@@ -18,3 +18,17 @@ function nextSlider() {
 };
 
 nextPhoto.onclick = nextSlider;
+
+function prevSlider() {
+	if (i < 1) {
+		searchPhoto.src = photos[i];
+		 i = (photos.length - 1);
+		 return (i);
+	} else {
+		searchPhoto.src = photos[i];
+		i--;
+		return i;
+	}
+};
+
+prevPhoto.onclick = prevSlider;
