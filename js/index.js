@@ -4,31 +4,26 @@ prevPhoto = document.getElementById('prevPhoto'),
 photos = ['i/IAC.jpg', 'i/breuer-building.jpg', 'i/guggenheim-museum.jpg', 'i/headquarters.jpg', 'i/new-museum.jpg'];
 
 let i = 0;
+searchPhoto.src = photos[i];
 
 function nextSlider() {
-	if (i < photos.length - 1) {
-		searchPhoto.src = photos[i];
-		 i++;
-		 return (i);
+	if (i < photos.length -1) {
+		i++;
 	} else {
-		searchPhoto.src = photos[i];
 		i = 0;
-		return i;
 	}
+	searchPhoto.src = photos[i];
 };
 
 nextPhoto.onclick = nextSlider;
 
 function prevSlider() {
 	if (i <= 0) {
-		searchPhoto.src = photos[i];
-		 i = (photos.length - 1);
-		 return (i);
+		i = (photos.length - 1);
 	} else {
-		searchPhoto.src = photos[i];
 		i--;
-		return i;
 	}
+	searchPhoto.src = photos[i];
 };
 
 prevPhoto.onclick = prevSlider;
