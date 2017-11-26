@@ -7,7 +7,7 @@ let i = 0;
 searchPhoto.src = photos[i];
 
 function nextSlider() {
-	if (i < photos.length -1) {
+	if (i < photos.length - 1) {
 		i++;
 	} else {
 		i = 0;
