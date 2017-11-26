@@ -4,7 +4,6 @@ prevPhoto = document.getElementById('prevPhoto'),
 photos = ['i/IAC.jpg', 'i/breuer-building.jpg', 'i/guggenheim-museum.jpg', 'i/headquarters.jpg', 'i/new-museum.jpg'];
 
 let i = 0;
-searchPhoto.src = photos[i];
 
 function nextSlider() {
 	if (i < photos.length - 1) {
